@@ -1,5 +1,5 @@
 Name:		python-prometheus-client
-Version:	0.21.0
+Version:	0.21.1
 Release:	1
 Source0:	https://files.pythonhosted.org/packages/source/p/prometheus-client/prometheus_client-%{version}.tar.gz
 Summary:	Python client for the Prometheus monitoring system.
