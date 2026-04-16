@@ -1,26 +1,27 @@
+%define module prometheus-client
+%define oname prometheus_client
+
 Name:		python-prometheus-client
-Version:	0.21.1
-Release:	3
-Source0:	https://files.pythonhosted.org/packages/source/p/prometheus-client/prometheus_client-%{version}.tar.gz
+Version:	0.25.0
+Release:	1
 Summary:	Python client for the Prometheus monitoring system.
-URL:		https://pypi.org/project/prometheus-client/
-License:	Apache Software License 2.0
+License:	Apache-2.0 AND BSD-2-Clause
 Group:		Development/Python
-BuildRequires:	python%{pyver}dist(pip)
+URL:		https://pypi.org/project/prometheus-client
+Source0:	https://files.pythonhosted.org/packages/source/p/%{module}/%{oname}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
+
+BuildSystem:	python
 BuildArch:	noarch
+BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(wheel)
+Suggests:	python%{pyver}dist(aiohttp)
+Suggests:	python%{pyver}dist(django)
+Suggests:	python%{pyver}dist(twisted)
 
 %description
 Python client for the Prometheus monitoring system.
 
-%prep
-%autosetup -p1 -n prometheus_client-%{version}
-
-%build
-%py_build
-
-%install
-%py_install
-
 %files
-%{py_sitedir}/prometheus_client
-%{py_sitedir}/prometheus_client-*.*-info
+%{py_sitedir}/%{oname}
+%{py_sitedir}/%{oname}-%{version}.dist-info
