@@ -2,7 +2,7 @@
 %define oname prometheus_client
 
 Name:		python-prometheus-client
-Version:	0.25.0
+Version:	0.26.0
 Release:	1
 Summary:	Python client for the Prometheus monitoring system.
 License:	Apache-2.0 AND BSD-2-Clause
