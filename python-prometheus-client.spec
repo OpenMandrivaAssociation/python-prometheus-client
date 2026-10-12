@@ -3,7 +3,7 @@
 
 Name:		python-prometheus-client
 Version:	0.26.0
-Release:	1
+Release:	2
 Summary:	Python client for the Prometheus monitoring system.
 License:	Apache-2.0 AND BSD-2-Clause
 Group:		Development/Python
